@@ -1,0 +1,11 @@
+{"Transactions":[{"Comment":null,"Transaction amount":5.0,"Counterparty id":"c7a66ef1-80af-461a-b630-bf4138d895d0","Cleared":"","id":"0741bf90-b695-4937-9cc9-69b1770ec5f7","Check Number":"2222","Date":"2016-07-02","Memo":null},{"Comment":null,"Transaction amount":7.0,"Counterparty id":"495b073e-be3c-400e-9d3f-65250a90917e","Cleared":"y","id":"0baded80-cce6-4333-9b49-5d945a66615e","Check Number":null,"Date":"2016-07-02","Memo":null},{"Comment":"vvvvv","Transaction amount":0.0,"Counterparty id":"","Cleared":"","id":"90fad396-b48f-4385-91e7-f240d06ea627","Check Number":"jjjjjjjjj","Date":"2017-06-29","Memo":"ssss"}],
+  "Counterparties":[
+    {"Short Name":"xcp2","Other Names":[],"Comment":"","name":"XCP2","id":"495b073e-be3c-400e-9d3f-65250a90917e"},
+    {"Short Name":"xcp3","Other Names":[],"Comment":"","name":"XCP3","id":"6ade894f-5407-49c9-951d-31a98627873c"},
+    {"Short Name":"xcp1","Other Names":[],"Comment":"","name":"XCP1","id":"c7a66ef1-80af-461a-b630-bf4138d895d0",
+  "Array1": [1,2,3,4,5,true,null,"ABCD"],
+      "Array2": [1,2,3,4,5,true,null,{"label":"ABCD"}],
+      "Array3": [1,2,3,4,5,true,null,{"label":"ABCD","XYZ": {}}]
+    }],
+
+  "Images":[{"File":"FEFB8A6D370812610009F.jpg"},{"File":"FEFB8A6D370912610009B.jpg"},{"File":"FEFB8A6D370912610009F.jpg"},{"File":"FEFB8A6D371412610009B.jpg"},{"File":"FEFB8A6D371412610009F.jpg"}]}

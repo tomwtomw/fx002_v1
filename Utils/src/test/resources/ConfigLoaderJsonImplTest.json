@@ -1,0 +1,10 @@
+{
+"ConfigLoaderJsonImplTest@Test@Office1":{
+  "key123": "value123"
+},
+  "ConfigLoaderJsonImplTest@Test@Laptop1":{
+    "key123": "value123"
+  }
+
+}
+
