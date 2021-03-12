@@ -1,0 +1,42 @@
+GRANT ALL PRIVILEGES ON rachunki_prod.* TO 'rachunkiprod'@'localhost' IDENTIFIED BY 'xxxxxx';
+
+rename C:\Users\tomw\IdeaProjectsData\Rachunki_devel\data
+
+copy
+H:\backup\storage\Documents\Applications\Prod\Rachunki\data
+to
+C:\Users\tomw\IdeaProjectsData\Rachunki_devel
+
+run
+
+"C:\Users\tomw>"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql" -u rachunkidevel -prachunkidevel rachunki_devel < H:\backup\mysql\rachunki_prod_20190209-191011.sql
+
+"C:\Users\tomw>"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql" -u rachunkidevel -prachunkidevel rachunki_devel < H:\backup\mysql\rachunki_prod.sql
+
+
+"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql" -u rachunkidevel -prachunkidevel rachunki_devel < H:\backup\mysql\rachunki_prod.sql
+
+
+To l
+cd "C:\Program Files\MySQL\MySQL Server 5.7\bin\"
+mysql -u rachunkidevel -prachunkidevel rachunki_devel < H:\backup\mysql\rachunki_prod.sql
+
+
+
+C:\Users\tomw>"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql" -u rachunkidevel -prachunkidevel rachunki_devel < G:\backup\mysql\rachunki_prod_20190216-190856.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+Production:
+
+production data is stored in
+C:\Users\tomw\Documents\Applications\Prod\Rachunki
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin>mysql -u rachunkiprod -prachunkiprod rachunki_prod < H:\backup\mysql\rachunki_prod.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin>
+
+
+
+C:\Users\tomw>
+C:\Users\tomw>

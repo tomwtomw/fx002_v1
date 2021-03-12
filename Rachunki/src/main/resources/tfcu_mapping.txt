@@ -1,0 +1,23 @@
+#   account id                         account name          cp id (for cp from tfcu)
+0 164c0688-2803-4d91-8de4-96f5eeb27fc0 sams club           @ 38a86f31-c868-457c-aa6d-595f5938096c
+1 2343604b-5463-4ae0-8a4e-b0915029aac1 psfcu_c             @ 4faacc4b-0e72-4569-af82-cc8869dc612b
+2 3dcbc124-ffda-4eab-ac24-4fd95e82fe43 boacc               @ d5959d84-9236-4664-ba02-e98b7d45ef83
+3 4421648c-750b-4190-87c0-7db885ec0597 hdcc                @ d3c9d97d-ca7d-44b4-adf4-566afe11f7af
+4 489baa6f-9c27-4ed5-acf8-4c161cd06647 amazon              @ 43e13b93-572e-4770-be7c-c1362a1fd1ac
+5 52f04fc8-09f0-4631-b2c3-4785cf93f66f boa40               @ eb62b047-d76c-452d-8425-11eb37b756be
+6 5851f3e8-7d7d-4eb2-8c56-fa0faf5f81ab psfcu_saving
+7 6726edd9-6e37-428b-9664-9ebeb1d28d03 boacar              @ 9991bafa-29a4-4100-8bf0-1e5752871db4
+8 6a6188e0-f297-4962-92a4-865c5ffc9eb3 tfcu_saving         @ f674a421-7ab2-449d-9579-2691a0847a8b
+9 7f30edf7-cb93-41ab-b171-239c5619ae37 st jude capital campaign@ eed2df88-87d3-4d9e-a5ef-6c664b7297ea
+10 91627656-c004-4382-bda8-84fe67a2e31e ficc               @ 16d1b911-bac1-405b-9d22-1e581c8bb385
+11 9c29bbfa-49a8-417d-b065-a49d8291a14b geico
+12 b1838b67-d822-4ceb-85c7-444405f453d6 Citi104            @ e84af827-4fbb-4a89-a2a8-99319f224f83
+13 b8d5dd23-3ab6-4d64-8db6-702cd60edfe9 boa50              @ 91d7c15e-3d74-455d-bd56-999e2f15fb1f
+14 c4e3b260-d2f8-4e47-88bb-441e0f6d289a ministries appeal  @ fb7cb8b2-db50-449d-ada2-923f9b7d1680
+15 d1c852ef-edfa-468b-9d6a-883c1fdacac9 Citi104 Escrow
+16 d21ce247-cd97-4afe-86ac-60b82c38e9b1 compass
+17 dbe41458-743d-41b2-808e-5477e1cc1ef0 tfcu
+18 dd3b286d-b1b9-4d66-b9ca-dc5e3c8bec80 gr                 @ 20c13c54-5860-439f-b603-3161be4a98f2
+19 25628674-0fd7-4b22-bc7c-394be95b7897 cenlar104          @ 3f26c7f8-28f6-4d51-9f24-41c0aec5644b
+20 fede4b2d-0722-4df6-84a2-12f939f5539e cenlar_escrow
+21 9a7f426f-3127-453f-b6c8-753904105f54 tfcu_vac           @ 1ba73722-1ff4-44bc-b140-cd279b88de5c

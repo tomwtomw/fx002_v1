@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.czeki.mergecounterparties.MergeCounterPartiesController">
+   <children>
+      <SplitPane dividerPositions="0.5051020408163265" layoutX="215.0" layoutY="112.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="336.0" prefWidth="788.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="294.0" layoutY="60.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="counterpartiesTableLeft" layoutX="94.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                <columns>
+                                  <TableColumn fx:id="counterpartyShortNameColumnLeft" prefWidth="75.0" text="Short Name" />
+                                    <TableColumn fx:id="counterpartyFullNameColumnLeft" prefWidth="151.0" text="Full Name" />
+                                  <TableColumn fx:id="counterpartyCommentColumnLeft" prefWidth="149.0" text="Comment" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="counterpartiesTableRight" layoutX="81.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                <columns>
+                                  <TableColumn fx:id="counterpartyShortNameColumnRight" prefWidth="75.0" text="Short Name" />
+                                  <TableColumn fx:id="counterpartyFullNameColumnRight" prefWidth="111.0" text="Full Name" />
+                                    <TableColumn fx:id="counterpartyCommentColumnRight" prefWidth="189.0" text="Comment" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="788.0">
+               <children>
+                  <GridPane layoutX="86.0" layoutY="50.0" prefHeight="149.0" prefWidth="782.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="239.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="0.0" prefWidth="28.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.0" minWidth="10.0" prefWidth="273.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="26.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="214.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="shortNameLeftButton" mnemonicParsing="false" onAction="#shortNameLeftButtonPressed" text="&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fullNameLeftButton" mnemonicParsing="false" onAction="#fullNameLeftButtonPressed" text="&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="commentLeftButton" mnemonicParsing="false" onAction="#commentLeftButtonPressed" text="&gt;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="shortNameRightButton" mnemonicParsing="false" onAction="#shortNameRightButtonPressed" text="&lt;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fullNameRightButton" mnemonicParsing="false" onAction="#fullNameRightButtonPressed" text="&lt;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="commentRightButton" mnemonicParsing="false" onAction="#commentRightButtonPressed" text="&lt;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="154.0" text="Left">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" text="Right" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="shortNameLabelLeft" prefHeight="17.0" prefWidth="155.0" text="Label" GridPane.rowIndex="1" />
+                        <Label fx:id="fullNameLabelLeft" text="Label" GridPane.rowIndex="2" />
+                        <Label fx:id="commentLabelLeft" prefHeight="17.0" prefWidth="237.0" text="Label" GridPane.rowIndex="3" />
+                        <Label fx:id="shortNameLabelRight" prefHeight="17.0" prefWidth="214.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="fullNameLabelRight" prefHeight="17.0" prefWidth="206.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="commentLabelRight" prefHeight="17.0" prefWidth="212.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                          <items>
+                            <Button fx:id="acceptButton" mnemonicParsing="false" onAction="#acceptButtonPressed" text="Accept">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                          </items>
+                        </ToolBar>
+                        <TextField fx:id="shortNameFieldMerged" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="fullNameFieldMerged" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="commentFieldMerged" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="exitWindowButton" layoutX="647.0" layoutY="245.0" mnemonicParsing="false" onAction="#closeWindowButtonPressed" text="Close Window">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

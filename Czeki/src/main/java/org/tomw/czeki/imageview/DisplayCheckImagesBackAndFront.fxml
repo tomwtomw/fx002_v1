@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.czeki.imageview.DisplayCheckImagesBackAndFrontController">
+   <children>
+      <BorderPane layoutX="1.0" layoutY="3.0" prefHeight="628.0" prefWidth="787.0">
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" text="Close">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </items></ToolBar>
+         </bottom>
+         <center>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="273.0" prefWidth="781.0">
+                           <children>
+                              <ImageView fx:id="imageViewFront" fitHeight="255.0" fitWidth="775.0" layoutX="7.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <AnchorPane layoutX="-1.0" layoutY="6.0" prefHeight="269.0" prefWidth="787.0">
+                           <children>
+                              <ImageView fx:id="imageViewBack" fitHeight="255.0" fitWidth="775.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#downloadFrontImageAction" text="Download Front" />
+                        <MenuItem mnemonicParsing="false" onAction="#downloadBackImageAction" text="Download Back" />
+                        <MenuItem mnemonicParsing="false" onAction="#downloadFrontAndBackImageAction" text="Download Front and back" />
+                    <MenuItem mnemonicParsing="false" onAction="#closeButtonAction" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

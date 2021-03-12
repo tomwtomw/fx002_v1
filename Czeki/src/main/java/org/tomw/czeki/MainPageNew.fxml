@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="751.0" prefWidth="1464.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.czeki.MainPageNewController">
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="transactionsButton" mnemonicParsing="false" onAction="#selectTransactionsAction" text="Transactions">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="counterpartiesButton" mnemonicParsing="false" onAction="#selectCounterPartiesAction" text="Counterparties">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="counterpartiesSummaryButton" mnemonicParsing="false" onAction="#counterPartiesSummaryButtonAction" text="Counterparties Summary">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#backupCurrentDataAction" text="Backup current file content">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="currentModeLabel" text="   " />
+            <Button mnemonicParsing="false" onAction="#toCsvButtonAction" text="To Csv">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label text="Current file:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentFileNameLabel" text="File not selected" />
+        </items>
+      </ToolBar>
+   </bottom>
+   <top>
+      <SplitPane dividerPositions="0.3409090909090909" orientation="VERTICAL" prefHeight="72.0" prefWidth="1133.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileAccountAction" text="Account" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileNewAction" text="New" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileCloseAction" text="Close" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileOpenAction" text="Open File" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileImportFromTextFileAction" text="Import from text file" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileExportToTextFileAction" text="Export to text file" />
+                              <MenuItem mnemonicParsing="false" text="Image Directory" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileSaveAction" text="Save" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileSaveAsAction" text="Save as ..." />
+                              <MenuItem mnemonicParsing="false" onAction="#menuFileExitAction" text="Exit" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#menuEditDisplayConfigAction" text="Display Configuration" />
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="Images">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#menuImagesSetImagesDirectory" text="Set Images Directory" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuImagesImportImages" text="Import Images" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuImagesReloadImages" text="Reload Images" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuImagesDisplayImage" text="Display Images" />
+                              <MenuItem mnemonicParsing="false" onAction="#menuImagesDeleteImages" text="Delete Images" />
+                          </items>
+                        </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="1131.0">
+               <children>
+                  <Label fx:id="accountNameLabel" layoutX="378.0" layoutY="13.0" text="Account">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+</BorderPane>

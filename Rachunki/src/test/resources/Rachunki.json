@@ -1,0 +1,25 @@
+{
+  "Rachunki@Devel@Office1": {
+    "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_devel\\data\\files",
+    "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_devel\\data\\context.properties"
+  },
+  "Rachunki@Preprod@Office1": {
+    "applicationDirectory": "C:/Users/tomw/Documents/Applications/Preprod/Rachunki",
+    "documentFileDirectory": "C:\\Users\\tomw\\Documents\\Applications\\Preprod\\Rachunki\\data\\documents",
+    "contextFile": "C:\\Users\\tomw\\Documents\\Applications\\Preprod\\Rachunki\\data\\context.properties"
+  },
+  "Rachunki@Prod@Office1": {
+    "applicationDirectory": "C:/Users/tomw/Documents/Applications/Prod/Rachunki",
+    "documentFileDirectory": "C:\\Users\\tomw\\Documents\\Applications\\Prod\\Rachunki\\data\\documents",
+    "contextFile": "C:\\Users\\tomw\\Documents\\Applications\\Prod\\Rachunki\\data\\context.properties"
+  },
+  "Rachunki@Devel@Laptop1": {
+    "documentFileDirectory": "C:\\Users\\tomw2\\Documents\\Projects\\devel\\Rachunki\\data\\files",
+    "contextFile": "C:\\Users\\tomw2\\Documents\\Projects\\devel\\Rachunki\\data\\context.properties"
+  },
+  "Rachunki@Test@Office1": {
+    "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\files",
+    "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\context.properties"
+  }
+
+}

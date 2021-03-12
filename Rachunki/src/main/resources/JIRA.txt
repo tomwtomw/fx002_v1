@@ -1,0 +1,8 @@
+===> 0001 export transactions to text file
+0002 export transactions to spreadsheet file
+0004 read ficc transactions spreadsheet, fill results into list of pojo
+0005 compare lists of ficc pojos, get the difference
+===> 0006 add button for comparing ficc transaction files
+0007 window for displaying comparison between ficc spreadsheets
+===> 0008 method incrementCheckNumber from TransactionsTabController should to to TomwStringutils and should have unit tests
+0009 Add big "Close window" button in transactions window

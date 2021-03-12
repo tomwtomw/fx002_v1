@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="1313.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.czeki.imageview.ImageStoreBrowserController">
+   <children>
+      <BorderPane prefHeight="658.0" prefWidth="1306.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <center>
+            <SplitPane dividerPositions="0.28949858088930935" prefHeight="618.0" prefWidth="901.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="535.0">
+                     <children>
+                        <TableView fx:id="pictureImageView" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="570.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="230.0" text="Name" />
+                            <TableColumn fx:id="dateColumn" prefWidth="153.0" text="Time" />
+                              <TableColumn prefWidth="104.0" text="Check" />
+                              <TableColumn prefWidth="82.0" text="F/B" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="718.0">
+                     <children>
+                        <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="630.0" layoutX="3.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="583.0" fitWidth="612.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete Selected Image">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" text="Close window">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

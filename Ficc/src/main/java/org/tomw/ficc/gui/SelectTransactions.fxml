@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="706.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.ficc.gui.SelectTransactionsController">
+   <children>
+      <SplitPane dividerPositions="0.569402228976697" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="293.0">
+               <children>
+                  <TableView fx:id="counterpartiesTable" layoutX="55.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="counterpartyShortNameColumn" prefWidth="126.0" text="Counterparty Name" />
+                      <TableColumn fx:id="counterpartyFullNameColumn" prefWidth="175.0" text="Full Name" />
+                        <TableColumn fx:id="counterpartyCommentColumn" prefWidth="252.0" text="Comment" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <BorderPane layoutX="28.0" layoutY="252.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <top>
+                        <Label text="Select date and time" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="thisMonthRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="This month" />
+                              <RadioButton fx:id="thisPeriodRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="This period" GridPane.columnIndex="1" />
+                              <RadioButton fx:id="thisYearRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="This year" GridPane.columnIndex="2" />
+                              <RadioButton fx:id="pastMonthRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="Past month" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="pastPeriodRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="Past period" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="pastYearRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="Past year" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="timeIntervalRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="Between dates" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="endDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="allDatesRadioButton" mnemonicParsing="false" onAction="#dateGroupRadioButtonAction" text="All dates" GridPane.rowIndex="3" />
+                              <RadioButton fx:id="allCounterPartiesRadioButton" mnemonicParsing="false" onAction="#counterPartyGroupRadioButtonAction" text="All counterparties" GridPane.rowIndex="4" />
+                              <RadioButton fx:id="selectedCounterPartiesRadioButton" mnemonicParsing="false" onAction="#counterPartyGroupRadioButtonAction" text="Selected counterparties" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button fx:id="invertSelectionButton" mnemonicParsing="false" onAction="#invertSelectionButtonAction" text="Invert selection" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </center>
+                     <bottom>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonAction" text="OK">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                          </items>
+                        </ToolBar>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.guiutils.documentgalery.gui.DocumentGalleryController">
+   <children>
+      <SplitPane dividerPositions="0.3640939597315436" layoutX="86.0" layoutY="111.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="entitiesTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="documentNameColumn" prefWidth="143.0" text="Document Name" />
+                      <TableColumn prefWidth="64.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.8698979591836735" layoutX="80.0" layoutY="82.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <GridPane layoutX="72.0" layoutY="79.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="204.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="42.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="106.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="223.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="documentNameLabel" prefHeight="17.0" prefWidth="102.0" text="Name" />
+                                    <Label fx:id="documentErrorLabel" text="Error" GridPane.columnIndex="2" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label fx:id="documentFileLabel" prefHeight="17.0" prefWidth="109.0" text="Image" />
+                                          <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadButtonAction" prefHeight="25.0" prefWidth="74.0" text="Upload">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#downloadButtonAction" prefHeight="23.0" prefWidth="73.0" text="Download">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="deleteDocumentFileButton" mnemonicParsing="false" onAction="#deleteFileButtonAction" prefHeight="25.0" prefWidth="74.0" text="Delete File">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="viewButton" mnemonicParsing="false" onAction="#viewButtonAction" prefHeight="25.0" prefWidth="75.0" text="View">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="documentDescriptionErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="documentDescriptionLabel" prefHeight="17.0" prefWidth="105.0" text="Description" GridPane.rowIndex="2" />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <ImageView fx:id="imageView" fitHeight="216.0" fitWidth="212.0" layoutX="6.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <TextArea fx:id="documentDescriptionTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="documentNameTextField" GridPane.columnIndex="1" />
+                                    <Label fx:id="documentFileErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <children>
+                                <ToolBar layoutX="14.0" layoutY="2.0" prefHeight="40.0" prefWidth="463.0">
+                                    <items>
+                                        <Button fx:id="newButton" mnemonicParsing="false" onAction="#newButtonAction" text="New">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="Save">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonAction" text="Clear">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                    <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonAction" text="OK">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    </items>
+                                </ToolBar>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

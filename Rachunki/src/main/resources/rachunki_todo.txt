@@ -1,0 +1,113 @@
+===>1. Cleared flag display
+===>2. Number of transactions per account display
+===>3. Display account name on account panel
+===>4. CRUD buttons for account
+===>5. Comments button for account should launch commnents window
+6. Details button should launch details window
+===>7. Documents button should launch Documents window
+8. Clear button not implemented
+===> 9. Flip accounts button
+===>9.1 When using flip accounts button, highlight correct transaction in new window
+====>10. Counterparty button in Transaction window is not implemented
+11. Previous check number button is not implemented
+===>12. Documents button in transaciton window is not implemented
+====>13. Upload, delete and auto buttons for check images are not implemented
+===>13.1 auto button for check images needs to be implemented
+14. More details button in transaction window is not implemented
+15. Add SmartCheckUpload button for checks.
+====>16. Add statistics summary display for checks
+====>17. Flip sum cleared/Sum all columns in transacitons display
+====>18. Delete button should always ask for confirmation
+19. Account should be displayed at the top. Also local/remote account info
+====> 20. Display number of transactions per account at Accounts window
+====>21. Accounts window does not have local account check box
+====>22. Filter accounts in accounts window
+====>23. Select transactions based on account and date in transactions window
+====>24. Window which displays configuration details, location of storage dirs etc.
+====>25. Fix the cascading bug when deleting document file
+26. Add expired transaction checkbox in gui
+27. Add documents tab
+28. add transactions active checkbox
+====>29. Parametrize check upload for front and back to reduce duplicate code
+====>30. add check image download button
+====>31. display transaction statistics
+====>32. merge accounts window
+32.1 Merge two accounts boa40. Clarify why they are different.
+====>33. ingest to prod database
+====>34. Auto backup script
+35. Add big "close window" button in Accounts window
+====>36. make production version work. Deploy version 0.0 to production
+====>36. Help should display configuration status window
+====>37. Comments button action in transaction tabs should display editable text window
+====>38. standard output and standard error files should be date dependent
+39. Big display on every window whether this is prod/preprod/devel
+====>40. When we have transaction displayed and click on counterparty then in the counterparties winbdow we should see the original counterparty highlighted
+====>41. In transactions window "Flip" button should not be active if no transaction is selected.
+42. dedicated check images tab
+43. selfIdentificationService should know build id and version number
+44. merge accounts citi104, cenlar escrow
+====>45. disable remaining labels in Transaction table
+46. Add download button in image view window
+====>47. When filtering/unfiltering accounts scroll to the selected account
+====>48. in Transactions window, after save button, update check statistics.
+====>49. BLOCKER When creating transaction in transaction window, the sign of transaction is messed up
+====>50. Ask if delete source when uploading check images
+====>51. Automatic check image upload
+====52. Checkbox "cleared" for transactions locals is not saved and causes bad statistics
+53. Statistics for St jude capital Campaign is wrong
+54. transaction statictics should show non clrared transactions (and sums) separately for credits and debits
+55. Hibernate configuration should be in config files, not hardcoded
+56. When clicked on Display all transactions in transactions window and no transaction is selected it throws stacktraces due to NPE
+57. In transactions table add filter on check number and counterparty short name and maybe date
+===>58. When flipping accounts in transactions window scroll to selected transaction
+59. Window title shows if it is prod/devel/ it should also shoe application name
+===>60. If not all entries are correct in the transaction form mark error mesage and display alert.
+===>61. Cleared should be boldface. Counterparty button should be boldface
+62. Display external file name next to check image
+====>63. when auto upload of check image failed to find file, display a message saying which directory was used.
+64. Make directory for auto upload of check image configurable.
+====>65. Comments in transaction table should sisplaym only first line of comments
+66. When in transactions window no transaction is defined then all controls should be disabled exept New button
+67. What is test.config.properties for? Eliminate if not needed.
+68. After accounts are merged remove them from merge window
+69. Correct colors in merge window, clean merge window
+70. add account filter in merge accounts window
+70.1 display accounts in merge window in sorted order
+71. When account is marked as cleared it does not appear immediately in table view
+====>72. Documents should ask if delete when upload
+73. Export data to excel
+74. When transaction is cleared on local account no more updates should be possible
+75. Cleared field should be active only for local accounts
+76. transaction status in table should update after transaction save
+===>77. There should be a button in transactions table "show list of counterparties which appear only for this account".
+78. When autouploading check images, it should ask whether to delete input file
+===>79. When cleared field is changed it should reflect in the table immediately
+80. When counterparty is changed it should appear in table immediately.
+====>81. Filter in counterparty and transactions table should take "Enter" button as filter selection
+===>82. When selecting counterparty for transaction create option "Show all counterparties which happened for current account".
+====>83. Comment field should wrap text
+84. Correct samsc transactions
+====> 85. When documents are added it deletes all fields in transaction s table
+86. When transaction is cleared then the sum column should be updated as well
+====>87. Running sums of transactions should be updated when status changes cleared/not cleared
+88. query "all transactions for current cp in past year"
+89. Next to add counterparty button on transactions table should be button "select from most recent counterparties for current account"
+90. When creating new documents there should option "Browse file, pick it and fill document data based on this file".
+91. There should be script for automatic loading backup dump to devel database.
+92. There should be script for a one step deployment
+93. Comment field in counterparties table should show only beginning of comment
+94. When deleting transaction it should ask for confirmation whether delete each of its documents.
+95. When showing list of documents in documents table document title should show document title and not file name
+96. There should be possibility to search for documents based on comment,description or title content.
+97. Document should contain more than one media file.
+98. When displaying accounts table, when added document to account it is impossible to delete the document
+====>99. When showing filtered transactions then they should appear sorted by date
+====>100. There should be a "Primary account" category. There should a a button "display only primary accounts"
+====?101. Display window with "Primary account summary"
+102. Main window size should be set depending on screen  size
+103. primary and local account selection should be exclusive (radio button, menu selection?)
+===>104. Documents overwrite each other
+105. When createing documents from file, documents are not saved for kforce
+106. Add "common" category for accounts
+107. Add "dump transactions" to csv file
+108. Add "dump transactions" to json file

@@ -1,0 +1,2 @@
+#   account id                         account name          cp id (for cp from psfcu_c)
+1 5851f3e8-7d7d-4eb2-8c56-fa0faf5f81ab psfcu_saving_account        @ 21ce56dd-a123-461e-a67a-751f7f2ac7aa

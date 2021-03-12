@@ -1,0 +1,17 @@
+ GRANT ALL PRIVILEGES ON rachunki_devel.* TO 'rachunkidevel'@'localhost' IDENTIFIED BY 'xxxxxx';
+
+cd "C:\Program Files\MySQL\MySQL Server 5.7\bin"
+.\mysqldump addressbook_prod -u addressbookprod -p > H:\backup\mysql\addressbook_dump_2018-09-09.txt
+
+
+                         SET FOREIGN_KEY_CHECKS=0;
+                         DROP TABLE table_name;
+                         DROP TABLE checkdocument;
+                         DROP TABLE documentfile;
+                         DROP TABLE konto;
+                         DROP TABLE konto_documentfile;
+                         DROP TABLE oldkontoids;
+                         DROP TABLE oldtransakcjaids;
+                         DROP TABLE transakcja;
+                         DROP TABLE transakcja_documentfile;
+                         SET FOREIGN_KEY_CHECKS=1;

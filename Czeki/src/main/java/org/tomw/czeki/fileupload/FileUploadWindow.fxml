@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.czeki.fileupload.FileUploadWindowController">
+   <children>
+      <BorderPane layoutX="2.0" layoutY="3.0" prefHeight="423.0" prefWidth="704.0">
+         <top>
+            <Label text="Window Title" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.0989010989010989" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" text="Directory:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="imageDirectoryLabel" layoutX="93.0" layoutY="8.0" prefHeight="17.0" prefWidth="594.0" text="Directory Name">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ListView fx:id="listViewImages" layoutX="8.0" layoutY="5.0" prefHeight="277.0" prefWidth="692.0" />
+                        <Label fx:id="uploadedFileNameLabel" layoutX="504.0" layoutY="294.0" prefHeight="17.0" prefWidth="173.0" text="Label" />
+                        <ProgressBar fx:id="progressBar" layoutX="8.0" layoutY="293.0" prefHeight="18.0" prefWidth="124.0" progress="0.0" />
+                        <Label fx:id="uploadStatusLabel" layoutX="146.0" layoutY="294.0" prefHeight="17.0" prefWidth="317.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="selectFilesButton" mnemonicParsing="false" onAction="#selectFilesButtonAction" text="Select Files">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="clearFileSelectionButton" mnemonicParsing="false" onAction="#clearFileSelectionAction" text="Clear Selection">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="uploadFilesButton" mnemonicParsing="false" onAction="#uploadFilesButtonAction" text="Upload Files">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

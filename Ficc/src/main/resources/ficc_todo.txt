@@ -1,0 +1,2 @@
+1.0 ficc has a bug where not all transactions are ingested
+2. Integrate ficc with Rachunki
