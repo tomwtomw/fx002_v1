@@ -5,6 +5,7 @@ import org.tomw.utils.TomwStringUtils;
 import java.util.Comparator;
 
 public class KontoShortNameComparator implements Comparator<Konto> {
+
     @Override
     public int compare(Konto t1, Konto t2) {
         if (t1==null && t2==null){

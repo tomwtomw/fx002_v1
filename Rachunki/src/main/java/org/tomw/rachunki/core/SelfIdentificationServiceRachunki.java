@@ -12,6 +12,9 @@ public class SelfIdentificationServiceRachunki extends SelfIdentificationService
     public  final String DEVEL_DIR_OFFICE1 = "C:\\Users\\tomw\\IdeaProjects\\fx001_v2";
     public  final String TEST_DIR_OFFICE1 = "C:\\Users\\tomw\\IdeaProjects\\fx001_v2\\Rachunki";
 
+    public  final String DEVEL_DIR_OFFICE2 = "C:\\Users\\tomw\\IdeaProjects\\fx002_v1";
+    public  final String TEST_DIR_OFFICE2 = "C:\\Users\\tomw\\IdeaProjects\\fx002_v1\\Rachunki";
+
     public  final String DEVEL_DIR_LAPTOP1 = "D:\\tomw2\\IdeaProjects\\fx001_v2";
     public  final String TEST_DIR_LAPTOP1 = "D:\\tomw2\\IdeaProjects\\fx001_v2\\Rachunki";
 
@@ -23,6 +26,10 @@ public class SelfIdentificationServiceRachunki extends SelfIdentificationService
         getMap().put(OFFICE1,new HashMap<>());
         getMap().get(OFFICE1).put(DEVEL,DEVEL_DIR_OFFICE1);
         getMap().get(OFFICE1).put(TEST,TEST_DIR_OFFICE1);
+
+        getMap().put(OFFICE2,new HashMap<>());
+        getMap().get(OFFICE2).put(DEVEL,DEVEL_DIR_OFFICE2);
+        getMap().get(OFFICE2).put(TEST,TEST_DIR_OFFICE2);
 
         getMap().put(LAPTOP1,new HashMap<>());
         getMap().get(LAPTOP1).put(DEVEL,DEVEL_DIR_LAPTOP1);

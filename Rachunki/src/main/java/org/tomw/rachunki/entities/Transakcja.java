@@ -31,6 +31,18 @@ public class Transakcja implements Identifiable {
     private StringProperty comment = new SimpleStringProperty(BLANK);
     private StringProperty shortComment = new SimpleStringProperty(BLANK);
 
+    public double getTransactionDirectionAmount() {
+        return transactionDirectionAmount.get();
+    }
+
+    public DoubleProperty transactionDirectionAmountProperty() {
+        return transactionDirectionAmount;
+    }
+
+    public void setTransactionDirectionAmount(double transactionDirectionAmount) {
+        this.transactionDirectionAmount.set(transactionDirectionAmount);
+    }
+
     private DoubleProperty transactionAmount = new SimpleDoubleProperty(0.0);
 
     private DoubleProperty transactionDirectionAmount = new SimpleDoubleProperty(0.0);
@@ -547,6 +559,7 @@ public class Transakcja implements Identifiable {
 
 
     // === comparators ====//
+    @Transient
     public static Comparator<Transakcja> transactionByDateComparator
             = new Comparator<Transakcja>() {
 

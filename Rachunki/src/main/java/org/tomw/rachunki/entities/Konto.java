@@ -58,6 +58,9 @@ public class Konto implements Identifiable {
 
     private String mostRecentCheckNumber = BLANK;
 
+    public Konto() {
+    }
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     public int getId() {

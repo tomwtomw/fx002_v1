@@ -20,6 +20,11 @@
   "Rachunki@Test@Office1": {
     "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\files",
     "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\context.properties"
+  },
+
+  "Rachunki@Test@Office2": {
+    "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\files",
+    "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_test\\data\\context.properties"
   }
 
 }

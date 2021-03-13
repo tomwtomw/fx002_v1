@@ -25,9 +25,24 @@ public class DocumentFile implements Identifiable {
     private final StringProperty comment = new SimpleStringProperty();
     private final StringProperty documentType = new SimpleStringProperty(BLANK);
 
+    public String getInternalSubdirectory() {
+        return internalSubdirectory.get();
+    }
+
+    public StringProperty internalSubdirectoryProperty() {
+        return internalSubdirectory;
+    }
+
+    public void setInternalSubdirectory(String internalSubdirectory) {
+        this.internalSubdirectory.set(internalSubdirectory);
+    }
+
     private final StringProperty internalSubdirectory = new SimpleStringProperty();
 
     private ObjectProperty<LocalDateTime> uploadDateTime = new SimpleObjectProperty<>();
+
+    public DocumentFile() {
+    }
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

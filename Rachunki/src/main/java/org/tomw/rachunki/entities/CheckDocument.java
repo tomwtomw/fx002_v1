@@ -30,6 +30,8 @@ public class CheckDocument implements Identifiable {
     private DocumentFile checkImageFront;
     private DocumentFile checkImageBack;
 
+    public CheckDocument(){}
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {

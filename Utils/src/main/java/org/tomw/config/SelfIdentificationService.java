@@ -2,6 +2,7 @@ package org.tomw.config;
 
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ public abstract class SelfIdentificationService {
 
     public static final String LAPTOP1="Laptop1";
     public static final String OFFICE1="Office1";
+    public static final String OFFICE2="Office2";
 
     public static final String TEST="Test";
     public static final String DEVEL="Devel";
@@ -43,6 +45,9 @@ public abstract class SelfIdentificationService {
     public String  getSystemName(){
         if(isLaptop1()){
             return LAPTOP1;
+        }
+        if(isOffice2()){
+            return OFFICE2;
         }
         if(isOffice1()){
             return OFFICE1;
@@ -80,6 +85,10 @@ public abstract class SelfIdentificationService {
      */
     public boolean isOffice1(){
         return currentDir().contains("C:\\Users\\tomw\\");
+    }
+
+    public boolean isOffice2(){
+        return (new File("C:\\Users\\tomw\\IdeaProjects\\fx002_v1")).exists();
     }
 
     public abstract String getApplicationName();
