@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.gui.viewimage.ViewImageWindowController">
+    <children>
+        <BorderPane layoutX="92.0" layoutY="65.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#downloadImageMenuAction" text="Download" />
+                                <MenuItem mnemonicParsing="false" onAction="#closeAction" text="Close" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <ScrollPane fx:id="scrollPane" BorderPane.alignment="CENTER">
+                    <content>
+                        <AnchorPane fx:id="anchorPane">
+                            <children>
+                                <ImageView fx:id="imageView" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                            </children>
+                            <padding>
+                                <Insets top="1.0" />
+                            </padding>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </center>
+            <bottom>
+                <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeAction" text="Close">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="rotateLeftButton" mnemonicParsing="false" onAction="#rotateLeftAction" text="Rotate Left">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="rotateRightButton" mnemonicParsing="false" onAction="#rotateRightAction" text="Rotate Right">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="fitToDisplayButton" mnemonicParsing="false" onAction="#fitToDisplayButtonAction" text="Fit To Display">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="Save">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Slider fx:id="slider" onDragDone="#sliderMovedAction" onKeyTyped="#sliderMovedAction" onMouseReleased="#sliderMovedAction" onScrollFinished="#sliderMovedAction" prefHeight="24.0" prefWidth="945.0" showTickMarks="true" value="100.0" />
+                    </items>
+                </ToolBar>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
