@@ -40,3 +40,6 @@ C:\Program Files\MySQL\MySQL Server 5.7\bin>
 
 C:\Users\tomw>
 C:\Users\tomw>
+
+CREATE USER 'rachunkidevel'@'localhost' IDENTIFIED BY 'rachunkidevel';
+grant all on rachunki_devel.* to 'rachunkidevel'@'localhost' ;

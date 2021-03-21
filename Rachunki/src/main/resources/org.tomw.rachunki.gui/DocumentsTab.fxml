@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="580.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.rachunki.gui.DocumentsTabController">
+    <children>
+        <SplitPane dividerPositions="0.08333333333333333" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+            <items>
+                <AnchorPane maxHeight="30.0" minHeight="20.0" prefHeight="20.0" prefWidth="160.0">
+                    <children>
+                        <Label fx:id="mainTitleLabel" layoutX="20.0" layoutY="7.0" prefHeight="17.0" prefWidth="564.0" text="TITLE Documents">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane>
+                    <children>
+                        <SplitPane dividerPositions="0.4824561403508772" layoutX="88.0" layoutY="114.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                            <items>
+                                <AnchorPane>
+                                    <children>
+                                        <SplitPane dividerPositions="0.9403254972875226" layoutX="14.0" layoutY="78.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <items>
+                                                <AnchorPane minHeight="500.0" minWidth="700.0" prefHeight="515.0" prefWidth="700.0">
+                                                    <children>
+                                                        <SplitPane dividerPositions="0.9032258064516129" layoutX="35.0" layoutY="58.0" orientation="VERTICAL" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                            <items>
+                                                                <AnchorPane>
+                                                                    <children>
+                                                                        <TableView fx:id="entitiesTable" layoutX="3.0" layoutY="14.0" minHeight="-Infinity" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                            <columns>
+                                                                                <TableColumn fx:id="documentTitleColumn" minWidth="100.0" prefWidth="150.0" text="Title" />
+                                                                                <TableColumn fx:id="externalFileNameColumn" minWidth="100.0" prefWidth="150.0" text="FileName" />
+                                                                                <TableColumn fx:id="documentDescriptionColumn" minWidth="100.0" prefWidth="150.0" text="Description" />
+                                                                                <TableColumn fx:id="uploadDateTimeColumn" minWidth="100.0" prefWidth="150.0" text="Upload Time" />
+                                                                            </columns>
+                                                                            <padding>
+                                                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                                            </padding>
+                                                                        </TableView>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                            </items>
+                                                        </SplitPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                    <children>
+                                                        <ToolBar layoutX="-5.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                            <items>
+                                                                <Button mnemonicParsing="false" text="All" />
+                                                                <Button mnemonicParsing="false" text="Button" />
+                                                                <Button mnemonicParsing="false" text="Button" />
+                                                                <Button mnemonicParsing="false" text="Button" />
+                                                            </items>
+                                                        </ToolBar>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minWidth="500.0">
+                                    <children>
+                                        <SplitPane dividerPositions="0.9385171790235082" layoutX="107.0" layoutY="52.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                    <children>
+                                                        <SplitPane dividerPositions="0.9126016260162602" layoutX="62.0" layoutY="56.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                            <items>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="461.0">
+                                                                    <children>
+                                                                        <GridPane layoutX="59.0" layoutY="76.0" prefHeight="468.0" prefWidth="459.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                            <columnConstraints>
+                                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                                                                            </columnConstraints>
+                                                                            <rowConstraints>
+                                                                                <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="100.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="100.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                <RowConstraints maxHeight="117.0" minHeight="30.0" prefHeight="114.0" vgrow="SOMETIMES" />
+                                                                            </rowConstraints>
+                                                                            <children>
+                                                                                <Label fx:id="documentTitleLabel" prefHeight="17.0" prefWidth="121.0" text="Document Title ">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <Label fx:id="documentTitleErrorLabel" prefHeight="17.0" prefWidth="50.0" text="Error" GridPane.columnIndex="2" />
+                                                                                <Label fx:id="documentFileNameErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                                                <Label fx:id="documentDescriptionErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                                <Label fx:id="documentCommentErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                                                <Label fx:id="uploadTimeErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                                                <Label fx:id="documentViewImageErrorLabel" text="Error" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                                                <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                                                    <items>
+                                                                                        <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#documentFileUploadButtonAction" text="Upload">
+                                                                                            <font>
+                                                                                                <Font name="System Bold" size="11.0" />
+                                                                                            </font>
+                                                                                        </Button>
+                                                                                        <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#documentFileDownloadButtonAction" text="Download">
+                                                                                            <font>
+                                                                                                <Font name="System Bold" size="11.0" />
+                                                                                            </font>
+                                                                                        </Button>
+                                                                                        <Button fx:id="deleteFileButton" mnemonicParsing="false" onAction="#documentFileDeleteButtonAction" text="Delete">
+                                                                                            <font>
+                                                                                                <Font name="System Bold" size="11.0" />
+                                                                                            </font>
+                                                                                        </Button>
+                                                                                    </items>
+                                                                                </ToolBar>
+                                                                                <Button fx:id="documentDescriptionButton" mnemonicParsing="false" onAction="#descriptionButtonAction" text="Description" GridPane.rowIndex="3">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Button>
+                                                                                <Button fx:id="documentCommentButton" mnemonicParsing="false" onAction="#commentButtonAction" prefHeight="25.0" prefWidth="137.0" text="Comment" GridPane.rowIndex="4">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Button>
+                                                                                <Label fx:id="uploadTimeLabel" prefHeight="17.0" prefWidth="142.0" text="Upload Time" GridPane.rowIndex="5">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <Button fx:id="documentViewButton" mnemonicParsing="false" onAction="#documentViewButtonAction" prefHeight="25.0" prefWidth="146.0" text="View" GridPane.rowIndex="6">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Button>
+                                                                                <TextField fx:id="documentTitleTextField" onKeyTyped="#formHasBeenEdited" GridPane.columnIndex="1" />
+                                                                                <Label fx:id="documentFileNameLabel" prefHeight="17.0" prefWidth="161.0" text="File Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                <Label fx:id="uploadTimeValueLabel" prefHeight="17.0" prefWidth="161.0" text="Upload time" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                                <ImageView fx:id="documentViewImage" fitHeight="109.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                                <TextArea fx:id="documentDescriptionTextArea" onKeyTyped="#formHasBeenEdited" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                                <TextArea fx:id="documentCommentTextArea" onKeyTyped="#formHasBeenEdited" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                                <Label prefHeight="17.0" prefWidth="100.0" text="Internal Id" GridPane.rowIndex="1">
+                                                                                    <font>
+                                                                                        <Font name="System Bold" size="12.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <Label fx:id="documentInternalId" prefHeight="17.0" prefWidth="204.0" text="Internal Id" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                            </children>
+                                                                        </GridPane>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                                            </items>
+                                                        </SplitPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                    <children>
+                                                        <ToolBar layoutY="-6.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                            <items>
+                                                                <Button fx:id="newButton" mnemonicParsing="false" onAction="#newButtonAction" text="New">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                <Button fx:id="newFromFileButton" mnemonicParsing="false" onAction="#newFromFileButtonAction" text="From File">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="Save">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonAction" text="Add">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeButtonAction" text="Remove">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonAction" text="Clear">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonAction" text="OK">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Button>
+                                                            </items>
+                                                        </ToolBar>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -92,7 +92,7 @@ public class SessionFactoryFactoryRachunkiImpl implements SessionFactoryFactory 
 
     /**
      * Build development instance of hibernate session factory
-     *  TODO hinbernate config should be in config file
+     *  TODO hibernate config should be in config file
      * @return
      */
     public static SessionFactory buildSessionFactoryDevel() {

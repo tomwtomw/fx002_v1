@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.rachunki.gui.TransactionsTabController">
+   <children>
+      <SplitPane dividerPositions="0.07160804020100503" layoutX="163.0" layoutY="108.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="727.0" prefWidth="1196.0">
+               <children>
+                  <SplitPane dividerPositions="0.4513422818791946" layoutX="170.0" layoutY="193.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="600.0" prefWidth="600.0">
+                           <children>
+                              <SplitPane dividerPositions="0.8928136419001218" layoutX="117.0" layoutY="91.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.7699724517906336" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="entitiesTable" layoutX="132.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="transactionDateColumn" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Date" />
+                                                          <TableColumn fx:id="transactionAmountColumn" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Amount" />
+                                                            <TableColumn fx:id="checkNumberColumn" maxWidth="68.0" minWidth="68.0" prefWidth="68.0" text="Check No" />
+                                                            <TableColumn fx:id="clearedLocalColumn" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" text="L" />
+                                                            <TableColumn fx:id="clearedRemoteColumn" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" text="R" />
+                                                            <TableColumn fx:id="counterpartyNameColumn" maxWidth="82.0" minWidth="82.0" prefWidth="82.0" text="Counterparty" />
+                                                            <TableColumn fx:id="commentColumn" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Comment" />
+                                                            <TableColumn fx:id="sumClearedColumn" maxWidth="75.0" prefWidth="75.0" text="Sum Cleared" />
+                                                            <TableColumn fx:id="sumAllColumn" maxWidth="70.0" minWidth="70.0" prefWidth="75.0" text="Sum All" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.2422360248447205" layoutX="95.0" layoutY="-46.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                        <items>
+                                                          <AnchorPane maxHeight="100.0" minHeight="0.0" minWidth="0.0" prefHeight="33.0" prefWidth="613.0">
+                                                               <children>
+                                                                  <GridPane layoutX="77.0" layoutY="-9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="82.0" prefWidth="82.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                                           <children>
+                                                                              <TextField fx:id="filterByCheckNumberTextField" alignment="CENTER_RIGHT" onAction="#filterSubmitButtonAction" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                                                           <children>
+                                                                              <TextField fx:id="filterByCounterPartyShortNameTextField" onAction="#filterSubmitButtonAction" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
+                                                                           <children>
+                                                                              <Button fx:id="filterSubmitButton" mnemonicParsing="false" onAction="#filterSubmitButtonAction" text="Filter" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="12.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                                                                           <children>
+                                                                              <Button fx:id="filterResetButton" mnemonicParsing="false" onAction="#filterResetButtonAction" text="Reset" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="12.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                               <children>
+                                                                  <GridPane layoutX="-71.0" layoutY="7.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                                           <children>
+                                                                              <Button fx:id="filterSelectCounterPartyButton" layoutX="25.0" layoutY="2.0" mnemonicParsing="false" onAction="#filterSelectCounterPartyButtonAction" text="Only Counterparty:" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                                           <children>
+                                                                              <Label fx:id="filterCounterpartyShortNameLabel" layoutX="40.0" layoutY="7.0" text="Counterparty Short Name" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                                                           <children>
+                                                                              <Button fx:id="filterResetCounterPartyButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#filterResetCounterPartyButtonAction" text="Reset" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                                                           <children>
+                                                                              <Button fx:id="filterCounterpartySubmitButton" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" onAction="#filterCounterpartySubmitButtonAction" text="Display" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <Button fx:id="filterCurrentCounterPartyButton" layoutX="28.0" layoutY="2.0" mnemonicParsing="false" onAction="#filterCurrentCounterPartyButtonAction" text="Current Counterparty" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Button fx:id="filterThisMonthButton" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#filterThisMonthButtonAction" text="This Month" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Button fx:id="filterThisYearButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#filterThisYearButtonAction" text="This Year" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Button fx:id="filterLastMonthButton" layoutX="27.0" layoutY="2.0" mnemonicParsing="false" onAction="#filterLastMonthButtonAction" text="Past  Month" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Button fx:id="filterLastYearButton" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onAction="#filterLastYearButtonAction" text="Past Year" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <Label fx:id="filterDateFromLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="34.0" text="From:" textAlignment="RIGHT" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <DatePicker fx:id="filterDataFromDatePicker" layoutX="-25.0" layoutY="2.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <Label fx:id="filterDateToLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="48.0" layoutY="6.0" text="To:" textAlignment="RIGHT" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <DatePicker fx:id="filterDataToDatePicker" layoutX="-32.0" layoutY="2.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <Button fx:id="filterBydateSubmitButton" layoutX="36.0" layoutY="5.0" mnemonicParsing="false" onAction="#filterBydateSubmitButtonAction" text="Submit" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                                           <children>
+                                                                              <Button fx:id="allTransactionsButton" layoutX="21.0" mnemonicParsing="false" onAction="#showAlltransactionsButtonAction" text="All Transactions" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="11.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children></AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <GridPane layoutX="27.0" layoutY="14.0" prefHeight="60.0" prefWidth="293.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="146.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="54.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Cleared transactions">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Non cleared transactions" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Total" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="numberOfTransactionsLabel" prefHeight="17.0" prefWidth="50.0" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="numberOfNonClearedTransactionsLabel" prefHeight="17.0" prefWidth="44.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="numberOfClearedTransactionsLabel" prefHeight="17.0" prefWidth="44.0" text="0" textAlignment="RIGHT" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sumOfClearedTransactionsLabel" prefHeight="17.0" prefWidth="65.0" text="0.0" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sumOfNonClearedTransactionsLabel" prefHeight="17.0" prefWidth="68.0" text="0.0" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sumOfTransactionsLabel" prefHeight="17.0" prefWidth="67.0" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <GridPane layoutX="1.0" layoutY="1.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="90.0" minHeight="30.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label fx:id="transactionDateLabel" prefHeight="21.0" prefWidth="176.0" text="Transaction date" textFill="#111010" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="transactionAmountLabel" prefHeight="21.0" prefWidth="176.0" text="Amount" textFill="#111010" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="transactionDateErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="transactionAmountErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="180.0" prefWidth="180.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="transactionAmountTextField" onKeyTyped="#formHasBeenEdited" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="21.0" prefWidth="176.0" text="Account" textFill="#111010">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="checkNumberLabel" prefHeight="21.0" prefWidth="176.0" text="Check No" textFill="#111010" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="checkNumberTextField" onKeyTyped="#checkNumberFieldHasBeenEdited" />
+                                                      <Button fx:id="lastCheckNumberButton" mnemonicParsing="false" onAction="#lastCheckNumberButtonAction" text="Previous Check" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font></Button>
+                                                   </children>
+                                                </GridPane>
+                                                <Label fx:id="counterpartyErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="memoLabel" prefHeight="21.0" prefWidth="176.0" text="Memo" textFill="#111010" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="memoTextField" onKeyTyped="#formHasBeenEdited" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="checkNumberErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="memoErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="commentsButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#commentsButtonAction" prefWidth="90.0" text="Comment" GridPane.rowIndex="6" />
+                                                <Label fx:id="commentErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea fx:id="commentTextArea" onKeyTyped="#formHasBeenEdited" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Button fx:id="documentsButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#documentsButtonAction" prefWidth="90.0" text="Documents " GridPane.rowIndex="7" />
+                                                <Label fx:id="documentsLabel" prefHeight="21.0" prefWidth="446.0" text="Documents summary" textFill="#111010" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="moreDetailsButton" mnemonicParsing="false" text="More Details" GridPane.rowIndex="11" />
+                                                <GridPane GridPane.rowIndex="9">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="viewCheckImageFrontButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#viewCheckImageFrontButtonAction" prefWidth="90.0" text="View" />
+                                                      <Button fx:id="uploadCheckImageFrontButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#uploadCheckImageFrontButtonAction" prefWidth="90.0" text="Upload" GridPane.rowIndex="1" />
+                                                      <Button fx:id="deleteCheckImageFrontButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#deleteCheckImageFrontButtonAction" prefWidth="90.0" text="Delete" GridPane.rowIndex="3" />
+                                                      <Button fx:id="autoCheckImageFrontButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#autoCheckImageUploadFrontButtonAction" prefWidth="90.0" text="Auto" GridPane.rowIndex="4" />
+                                                      <Button fx:id="downloadCheckImageFrontButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#downloadCheckImageFrontButtonAction" prefWidth="90.0" text="Download" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                   <children>
+                                                      <ImageView fx:id="checkImageFrontView" fitHeight="198.0" fitWidth="333.0" layoutX="14.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="251.0" AnchorPane.topAnchor="-2.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <GridPane GridPane.rowIndex="10">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="viewCheckImageBackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#viewCheckImageBackButtonAction" prefWidth="90.0" text="View" />
+                                                      <Button fx:id="uploadCheckImageBackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#uploadCheckImageBackButtonAction" prefWidth="90.0" text="Upload" GridPane.rowIndex="1" />
+                                                      <Button fx:id="deleteCheckImageBackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#deleteCheckImageBackButtonAction" prefWidth="90.0" text="Delete" GridPane.rowIndex="3" />
+                                                      <Button fx:id="autoCheckImageBackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#autoCheckImageUploadBackButtonAction" prefWidth="90.0" text="Auto" GridPane.rowIndex="4" />
+                                                      <Button fx:id="downloadCheckImageBackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#downloadCheckImageBackButtonAction" prefWidth="90.0" text="Download" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                                   <children>
+                                                      <ImageView fx:id="checkImageBackView" fitHeight="198.0" fitWidth="317.0" layoutX="14.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="267.0" AnchorPane.topAnchor="1.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <Label fx:id="documentsErrorLabel" prefHeight="21.0" prefWidth="176.0" text="Error" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane GridPane.columnIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label fx:id="transactionsForAccountLabel" minWidth="450.0" prefHeight="21.0" prefWidth="450.0" text="Account Name" textFill="#111010">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="localClearedPropertyCheckBox" mnemonicParsing="false" onKeyTyped="#formHasBeenEdited" onMouseClicked="#formHasBeenEdited" prefHeight="20.0" prefWidth="79.0" text="Cleared" GridPane.columnIndex="2" />
+                                                      <Label prefHeight="17.0" prefWidth="58.0" text="Local" textFill="#111010" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+
+                                                 <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                     <columnConstraints>
+                                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+                                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                                                      <ColumnConstraints maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                                                     </columnConstraints>
+                                                     <rowConstraints>
+                                                         <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                     </rowConstraints>
+                                                     <children>
+                                                        <DatePicker fx:id="transactionDatePicker" onAction="#formHasBeenEdited" onKeyTyped="#formHasBeenEdited" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                                         <Label fx:id="counterpartyLocalLabel" prefHeight="21.0" prefWidth="71.0" text="Remote" textFill="#111010" GridPane.columnIndex="1">
+                                                             <font>
+                                                                 <Font name="System Bold" size="15.0" />
+                                                             </font>
+                                                         </Label>
+                                                         <CheckBox fx:id="remoteClearedPropertyCheckBox" mnemonicParsing="false" onKeyTyped="#formHasBeenEdited" onMouseClicked="#formHasBeenEdited" text="Cleared" GridPane.columnIndex="2" />
+
+                                                     </children>
+                                                 </GridPane>
+
+
+                                                 <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="375.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label fx:id="counterpartyLabel" prefHeight="21.0" prefWidth="450.0" text="Counterparty Name" textFill="#111010">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                       <Button fx:id="addKnownCounterPartyButton" mnemonicParsing="false" onAction="#addKnownCounterPartyButtonAction" text="Add known" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                       <Button fx:id="addPrimaryCounterPartyButton" mnemonicParsing="false" onAction="#addPrimaryCounterPartyButtonAction" text="Add primary" GridPane.columnIndex="2">
+                                                           <font>
+                                                               <Font name="System Bold" size="12.0" />
+                                                           </font>
+                                                       </Button>
+                                                   </children>
+                                                </GridPane>
+                                                <Label fx:id="checkImageLabel" prefHeight="17.0" prefWidth="119.0" text="Check Image" GridPane.rowIndex="8">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="editCheckImageButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" text="Manage Check Image" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <Button fx:id="flipCounterpartybutton" mnemonicParsing="false" onAction="#flipCounterpartyButtonAction" text="Flip" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Button fx:id="counterpartyButton" layoutX="5.0" layoutY="2.0" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#counterpartyButtonAction" prefWidth="90.0" text="Counterparty" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </GridPane>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <ToolBar prefHeight="40.0" prefWidth="517.0">
+                                             <items>
+                                                <Button fx:id="newButton" mnemonicParsing="false" onAction="#newButtonAction" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="Save">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonAction" text="Add">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeButtonAction" text="Remove">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonAction" text="Clear">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonAction" text="OK">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </items>
+                                          </ToolBar>
+                                          <ToolBar layoutY="48.0" prefHeight="40.0" prefWidth="517.0">
+                                            <items>
+                                              <Button fx:id="exportToTextButton" mnemonicParsing="false" onAction="#exportToTextButtonAction" text="Export to text">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="exportToJsonButton" mnemonicParsing="false" onAction="#exportToJsonButtonAction" text="Export to json">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Button>
+                                                <Button fx:id="exportToSpreadsheetButton" mnemonicParsing="false" onAction="#exportToSpreadsheetButtonAction" text="Export to xls">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="compareFiccButton" mnemonicParsing="false" onAction="#compareFiccButtonAction" text="Compare ficc">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                            </items>
+                                          </ToolBar>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
