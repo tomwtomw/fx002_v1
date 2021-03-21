@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tomw.gui.textareaeditor.TextAreaEditorController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="6.0" prefHeight="392.0" prefWidth="600.0">
+         <top>
+            <Label fx:id="topLabel" text="Top level text" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+            <Button mnemonicParsing="false" onAction="#handleOkButtonPressed" text="OK">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleCancelButtonPressed" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+               </items>
+            </ToolBar>
+         </bottom>
+         <center>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

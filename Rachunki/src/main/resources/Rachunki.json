@@ -9,6 +9,11 @@
     "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_devel\\data\\documents",
     "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_devel\\data\\context.properties"
   },
+  "Rachunki@Prod@Office2": {
+    "applicationDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_prod",
+    "documentFileDirectory": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_prod\\data\\documents",
+    "contextFile": "C:\\Users\\tomw\\IdeaProjectsData\\Rachunki_devel\\data\\context.properties"
+  },
   "Rachunki@Preprod@Office1": {
     "applicationDirectory": "C:/Users/tomw/Documents/Applications/Preprod/Rachunki",
     "documentFileDirectory": "C:\\Users\\tomw\\Documents\\Applications\\Preprod\\Rachunki\\data\\documents",
